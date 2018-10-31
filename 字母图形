@@ -1,0 +1,56 @@
+方法一：
+（100）
+
+import java.util.Scanner; 
+public class Main {	
+public static void main(String[] args) {		
+Scanner sc = new Scanner(System.in);		
+int n=sc.nextInt();		
+int m=sc.nextInt();				
+for(int i=0;i<n;++i)		{			
+for(int j=0;j<m;++j)			{				
+System.out.print((char)(Math.abs(i-j)+'A'));					
+}			
+System.out.println();		
+}	} }
+
+
+方法二：
+（100）
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		
+		char [] str= {'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'};
+		
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		int m = sc.nextInt();
+		char a[][] = new char[n][m];
+		
+		for(int i = 0;i<n;i++) {
+			for (int j = 0;j<m;j++){
+					int x = i-j;
+					if(x<0) {
+						x=-1*x;
+					}
+					a[i][j] = str[x];
+		}
+	}
+		display(a);
+
+}
+	
+	static void display(char a[][]) {
+		for(int i = 0;i<a.length;i++) {
+			for(int j = 0;j<a[i].length;j++){
+				System.out.print(a[i][j]);
+			}
+			System.out.println();
+		}
+	}
+}
