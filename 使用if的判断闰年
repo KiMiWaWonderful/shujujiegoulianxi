@@ -1,0 +1,47 @@
+(50)
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+	 
+		Scanner sc = new Scanner(System.in);
+		Integer y = sc.nextInt();
+		if(y >= 1990 || y<= 2050) {
+			if( y%4 == 0 || y%100 !=0) {
+				System.out.println("yes");
+			}else if(y%400 == 0) {
+				System.out.println("yes");
+			}else {
+				System.out.println("no");
+			}
+		}
+	}
+
+}
+
+(100)
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scan=new Scanner(System.in);
+       // System.out.println("请输入一个年份");
+        long year;
+        try
+        {
+            year = scan.nextLong();
+            if(year%4==0&&year%100!=0||year%400==0){
+                System.out.println("yes");
+            }
+            else{
+                System.out.println("no");
+            }
+        } catch(Exception e){
+            System.out.println("您输入的不是合法的年份");
+        }
+
+
+    }
+
+}
