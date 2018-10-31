@@ -1,4 +1,5 @@
 递归：
+(50)
 import java.util.*;
 public class Main{
 	
@@ -19,6 +20,7 @@ public class Main{
 }
 
 非递归：
+(90)
 import java.util.*;
 public class Main{
 	public static void main(String[] args){
@@ -31,3 +33,9 @@ public class Main{
 		System.out.println(s);
 	}
 }
+
+
+
+
+
+
