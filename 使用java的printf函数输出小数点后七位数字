@@ -1,0 +1,12 @@
+import java.util.*;
+public class Main{
+	public static void main(String[]args){
+		Scanner sc = new Scanner(System.in);
+		int r = sc.nextInt();
+		double PI = 3.14159265358979323;
+		double s = r*r*PI;
+		System.out.printf("%.7f",s);
+	}
+}
+
+参考：https://blog.csdn.net/qq_25237663/article/details/48091133
