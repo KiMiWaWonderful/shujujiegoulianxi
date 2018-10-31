@@ -1,0 +1,53 @@
+使用递归：运行超时（30）
+
+import java.util.*;
+public class Main{
+	public static void main(String[]args){
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		System.out.println(fn(n));
+	}
+	
+	public static int fn(int n){
+		if(n ==1 || n == 2){
+			return 1;
+		}else{
+			return (fn(n-1)+fn(n-2))%10007;
+		}
+	}
+}
+
+（20）；
+import java.util.*;
+public class Main{
+	public static void main(String[]args){
+		Scanner sc  = new Scanner(System.in);
+		int n = sc.nextInt();
+		int a[] = new int[n+1];
+		a[1] = 1;
+		a[2] = 1;
+		for(int i = 3;i<=n;i++){
+			a[i]=a[i-1]+a[i-2];
+			
+		}
+		//a[i]=a[n];
+		System.out.println(a[n]%10007);
+	}
+}
+
+
+（100）：
+import java.util.*;
+public class Main {
+public static void main(String[] args) {
+int f1 = 1;
+int f2 = 1;
+int n = new Scanner(System.in).nextInt();
+for (int i=3; i<=n; i++){
+int t = f2;
+f2 = (f1 + f2) % 10007;
+f1 = t;     
+}    
+System.out.println(f2);
+ }
+}
