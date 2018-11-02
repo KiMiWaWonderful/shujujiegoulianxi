@@ -1,0 +1,39 @@
+问题描述
+　　1221是一个非常特殊的数，它从左边读和从右边读是一样的，编程求所有这样的四位十进制数。
+输出格式
+　　按从小到大的顺序输出满足条件的四位十进制数。
+  
+  
+  （0）（我的做法）
+  
+  public static void main(String[] args) {
+
+        int i,j,k,l;
+
+        for(i = 1;i<9;i++){
+            for(j = 0;j<9;j++){
+                for(k = 0;k<9;k++){
+                    for(l = 0;l<9;l++){
+                        if( i==l && j==k){
+                            System.out.println(i*1000+j*100+k*10+l);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    错误原因：for循环里应该是<=9，否则没有输出包含9的数字
+    
+    （100）（别人的做法）
+    
+    public static void main(String[] args){
+        for(int i = 1000; i < 10000;i++){
+            int a = i/1000;
+            int b = i/100%10;
+            int c = i/10%10;
+            int d = i%10;
+            if(a == d && b == c)
+                System.out.println(i);
+        }
+    }
