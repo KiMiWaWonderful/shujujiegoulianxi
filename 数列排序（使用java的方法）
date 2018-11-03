@@ -64,3 +64,7 @@ public class Main {
     }
 
 }
+
+Arrays.sort(int[] a)对数组内的元素从小到大进行排序，然后依次输出。
+Arrays.sort(int[] a, int fromIndex, int toIndex)这种形式是对数组进行部分排序，即对数组a的下标从fromIndex到toIndex-1的元素排序，注意：下标为toIndex的元素不参与排序！
+
