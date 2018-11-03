@@ -1,0 +1,12 @@
+public static void main(String[] args){
+        Scanner input = new Scanner(System.in);
+        String str = input.next();
+        System.out.println(Long.parseLong(str,16));
+    }
+    
+    public static void main(String[] args){
+        Scanner input = new Scanner(System.in);
+        String str = input.next();
+        System.out.print(Long.valueOf(str,16));
+       
+    }
