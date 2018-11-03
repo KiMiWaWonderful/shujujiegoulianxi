@@ -10,3 +10,7 @@ public static void main(String[] args){
         System.out.print(Long.valueOf(str,16));
        
     }
+    
+    
+Long.ParseLong(String)方法，将 string 参数解析为有符号十进制 ，返回一个long的result基本类型值 
+Long.ValueOf(String) ,方法得到的值非常相似。只是最后被转换为一个Long的包装类。
