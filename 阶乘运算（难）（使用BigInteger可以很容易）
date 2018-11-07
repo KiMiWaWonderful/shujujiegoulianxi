@@ -106,3 +106,18 @@ public static void main(String[] args) {
         int n = sc.nextInt();
         System.out.println(factorial(n));
     }
+    
+    
+    
+    （使用BigInteger更简洁的做法）
+    
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        BigInteger bi=new BigInteger("1");
+        for(int i=2;i<=n;i++){
+            bi=bi.multiply(new BigInteger(String.valueOf(i)));
+        }
+        System.out.println(bi);
+    }
+    
