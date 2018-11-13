@@ -1,0 +1,45 @@
+问题描述
+已知一个正整数N，问从1~N中任选出三个数，他们的最小公倍数最大可以为多少。
+输入格式
+输入一个正整数N。
+输出格式
+输出一个整数，表示你找到的最小公倍数。
+样例输入
+9
+样例输出
+504
+数据规模与约定
+1 <= N <= 106。
+ 
+ 
+ 分析：https://blog.csdn.net/violet_echo_0908/article/details/50602042
+ 
+ 
+ 
+ import java.util.Scanner;
+
+public class Main {
+
+    public void printResult(long n) {
+        long result = 0;
+        if(n <= 2)  //此时最多只能选择两个数，不符合题意
+            return;
+        if(n % 2 == 1) {
+            result = n * (n - 1) * (n - 2);    
+        } else {
+            if(n % 3 == 0)  //说明n和n - 3有最大公约数3
+                result = (n - 1) * (n - 2) * (n - 3);
+            else
+                result = n * (n - 1) * (n - 3);
+        }
+        System.out.println(result);
+        return;
+    }
+    
+    public static void main(String[] args) {
+        Main test = new Main();
+        Scanner in = new Scanner(System.in);
+        long n = in.nextLong();
+        test.printResult(n);
+    }
+}
