@@ -1,0 +1,67 @@
+先取出最长的字符串，并且字典顺序最小的字符串
+对于列表中的字符串，一个一个的判断其和目标串之间是否满足该关系：目标串删除部分字符可以得到该串
+
+
+第一种做法：
+
+public String findLongestWord(String s, List<String> d) {
+
+        //Arrays.sort(d);
+        Collections.sort(d);
+        String res = "";
+        for (String item:d) {
+            if(help(s,item) && item.length()>res.length()){
+                res = item;
+            }
+        }
+        return res;
+        }
+        
+        private boolean help(String s,String t){
+        boolean flag = false;
+        int i = 0,j = 0;
+        while (i<s.length() && j<t.length()){
+            if(s.charAt(i) == t.charAt(j)){
+                i++;
+                j++;
+            }else {
+                i++;
+            }
+        }
+        if(j == t.length()){
+            flag = true;
+        }
+        return flag;
+    }
+
+
+第二种做法：
+public String findLongestWord(String s, List<String> d) {
+
+String lword = "";
+        for (String target : d) {
+            int len1 = lword.length();
+            int len2 = target.length();
+            if (len1 > len2 || (len1 == len2 && lword.compareTo(target) < 0)) {
+                continue;
+            }
+            if (isLegal(s, target)) {
+                lword = target;
+            }
+
+        }
+        return lword;
+}
+
+public boolean isLegal(String s, String target) {
+        int j = 0;
+        for (int i = 0; i < s.length(); i++) {
+            if (j >= target.length()) {
+                break;
+            }
+            if (s.charAt(i) == target.charAt(j)) {
+                j++;
+            }
+        }
+        return j == target.length();
+    }
