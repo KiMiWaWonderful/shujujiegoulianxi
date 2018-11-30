@@ -1,4 +1,6 @@
 方法一：
+
+注意:输出时要转换为字符，否则输出的是数字
 （100）
 
 import java.util.Scanner; 
@@ -54,3 +56,33 @@ public class Main {
 		}
 	}
 }
+
+也可以直接写在一个函数里：
+public static void main(String[] args) {
+		// TODO Auto-generated method stub
+//		int n=Math.abs(0-4);
+//		System.out.println(n);
+		char[] str = {'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'};
+        //System.out.println(str.length);
+		
+		Scanner scanner = new Scanner(System.in);
+		int n = scanner.nextInt();
+		int m = scanner.nextInt();
+		char[][] dis = new char[n][m];
+		
+		for (int i = 0; i < n; i++) {
+			for (int j = 0; j < m; j++) {
+				int s = Math.abs(i-j);
+				dis[i][j] = str[s];
+			}
+		}
+		
+		for (int i = 0; i < n; i++) {
+			for (int j = 0; j < m; j++) {
+				System.out.print(dis[i][j]);
+			}
+			System.out.println();
+			
+		}
+	}
+
