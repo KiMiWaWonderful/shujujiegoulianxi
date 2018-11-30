@@ -10,3 +10,24 @@ public class Main{
 }
 
 参考：https://blog.csdn.net/qq_25237663/article/details/48091133
+
+
+java里有表示圆周率的方法.
+import java.util.Scanner;
+
+//import org.omg.CORBA.DoubleSeqHelper;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner scanner = new Scanner(System.in);
+		//double n = scanner.nextDouble();
+		int n = scanner.nextInt();
+		double s = n*n*Math.PI;
+		System.out.printf("%.7f", s);
+
+	}
+
+}
